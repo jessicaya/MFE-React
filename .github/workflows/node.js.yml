@@ -9,12 +9,13 @@ on:
     paths: ['packages/container/**']
   pull_request:
     branches: [ master ]
-    paths: ['packages/container/**']
+    paths: 
+      - 'packages/container/**'
   workflow_dispatch:   
     
 defaults:     
   run:
-    working-directory: packages/container
+    working-directory: 'packages/container'
     
 jobs:
   build:
