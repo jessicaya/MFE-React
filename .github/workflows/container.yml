@@ -21,7 +21,7 @@ jobs:
       - run: npm install
       - run: npm run build
 
-      - uses: GuillaumeFalourd/aws-clis-action@v2
+      - uses: GuillaumeFalourd/aws-clis-action@v1
         with:
           # AWS arguments
           args: s3 ls
