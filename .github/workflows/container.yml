@@ -27,5 +27,10 @@ jobs:
           aws-region: us-east-2
       - run: |
           aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
+      - uses: awact/cloudfront-action@0.1.2
+        with:
+          distribution-id: ${{ secrets.DISTRIBUTION_ID }}
+          source-path: /container/latest/index.html
+          
 
            
